@@ -12,6 +12,9 @@ public class roll {
         Student s2 = new Student("Alisha");
         Student s3 = new Student("Naina");
         Student s4 = new Student("Yasha");
+
+        Student.displayStudentCount();       
+
     }
 }
 
@@ -20,10 +23,23 @@ public class roll {
 package day1;
 
 public class Student {
-    static int rollNo = 0;
+    private int rollNo = 0;
+    private String name;
+
+    private static int count=0;
+
 
     public Student(String name) {
-        rollNo++;
+        this.name = name;
+        this.rollNo = ++count;
         System.out.println(rollNo + " " + name);
+    }
+
+    public String toString(){
+        rollNo++;
+        return "Student roll no:" +rollNo + "Name: "+name + ": "+name;
+    }
+    public static void displayStudentCount(){
+        System.out.println("Total students: "+count);
     }
 }
