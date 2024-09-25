@@ -1,0 +1,5 @@
+Static:
+. Static variables are shared by all objects of the class
+. It must be declared at class level and not in a method, else it'll have a local scope and static variables are accessible to all
+. Can access it directly with className.varName
+. Can refer to static variables with class name.
