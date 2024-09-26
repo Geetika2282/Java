@@ -1,0 +1,54 @@
+// str2.java
+
+public class str2 {
+
+
+    public static void main(String[] args) {
+        str2_methods m = new str2_methods();
+
+        String s1 = "Exception";
+        String s2 = "Expection";
+
+        // Counting upperCase, lowerCase letters
+        String s3 = "gEeTiKa AlIsHa";
+        int arr[] = m.upLow(s3);
+
+
+        int[] result = m.upLow(s3);
+
+        // Print the results
+        System.out.println("Uppercase count: " + result[0]); // Output: 2
+        System.out.println("Lowercase count: " + result[1]); // Output: 8
+
+        String s4 = "ABCDEF";
+        if (s4.compareTo(s4.toUpperCase())==0){
+            System.out.println("Given string is upper case");
+        }
+    }
+
+}
+
+
+// str2_methods.java
+public class str2_methods {
+    public int[] upLow(String txt) {
+
+        int countUp = 0; // Count of uppercase letters
+        int countLow = 0; // Count of lowercase letters
+
+        for (int i = 0; i < txt.length(); i++) {
+            char currentChar = txt.charAt(i);
+
+            if (Character.isUpperCase(currentChar)) {
+                countUp++;
+            }
+
+            else if (Character.isLowerCase(currentChar)) {
+                countLow++;
+            }
+        }
+
+        // Return counts as an array
+        return new int[] {countUp, countLow};
+    }
+}
