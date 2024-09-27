@@ -6,4 +6,4 @@ Static:
 
 Strings:
 . A class in java
-. Reference
+. If want to compare 2 values use equals; Use == to see if both references to the same object in memory
