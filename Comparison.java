@@ -12,8 +12,8 @@ public class Comparison {
         // The `==` operator checks if both references point to the same object in memory.
         System.out.println(s1 == s2);
 
-        // with new keyword points to different values. These are stored in heap but not in String loop
-        String w1 = new String("Yasha");
+        // Creating two strings w1 and w2 using the `new` keyword.
+        // This creates two different String objects in the heap memory, not in the String pool.        String w1 = new String("Yasha");
         String w2 = new String("Yasha");
 
         // The `equals` method compares the content of the strings.
