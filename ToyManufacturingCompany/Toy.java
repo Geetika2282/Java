@@ -19,7 +19,7 @@ public class Toy
         this.year = year;
         this.category = category;
     }
-//    getter for pdtID
+    //    getter for pdtID
     public int getPdtID(){
         return pdtID;
     }
@@ -30,32 +30,32 @@ public class Toy
         this.pdtID = pdtID;
     }
 
-//    getter for name
+    //    getter for name
     public String getName(){
         return name;
     }
 
-//    setter for name
+    //    setter for name
     public void setName(String name){
         this.name = name;
     }
 
-// getter for price
-public double getPrice(){
+    // getter for price
+    public double getPrice(){
         return price;
-}
+    }
 
-// setter for price
-public void setPrice(double price){
+    // setter for price
+    public void setPrice(double price){
         this.price = price;
-}
+    }
 
-// getter for age
+    // getter for age
     public int getAge(){
         return age;
     }
 
-// setter for age
+    // setter for age
     public void setAge(int age){
         this.age = age;
     }
@@ -79,9 +79,9 @@ public void setPrice(double price){
     public void setYear(int year) {
         this.year = year;
     }
-    
-    
-// Getter for year
+
+
+    // Getter for year
     public String getCategory() {
         return category;
     }
