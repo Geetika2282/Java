@@ -1,1 +1,6 @@
 // Try-catch
+. An exception can be handled using try, catch finally blocks.
+. It is possible to handle multiple exceptions using multiple catc blocks.
+. A single catch block can also be used to catch multiple exceptions using the or (|) symbol.
+. We cannot write catch block without try, but we can write try block without catch 
+. A single tey block can be followed by several catch blocks.
