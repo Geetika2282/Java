@@ -1,5 +1,7 @@
 import java.util.Arrays;
 import java.util.List;
+import java.util.OptionalDouble;
+import java.util.OptionalInt;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -20,5 +22,28 @@ public class DemoIntStream
             List<Integer> even = stream.map((n)->n*n).boxed().collect(Collectors.toUnmodifiableList());
             System.out.println();
 
+            stream = Arrays.stream(nums);
+            OptionalInt min = stream.min();
+            if(min.isPresent())
+                System.out.println(min.getAsInt());
+
+            stream = Arrays.stream(nums);
+            OptionalInt max = stream.max();
+            if(max.isPresent())
+                System.out.println(max.getAsInt());
+
+            stream = Arrays.stream(nums);
+            OptionalDouble ave = stream.average();
+            if(ave.isPresent())
+                System.out.println(ave.getAsDouble());
+
+            stream = Arrays.stream(nums);
+            OptionalInt total = stream.reduce((n1, n2)-> n1 * n2);
+            if(total.isPresent())
+                System.out.println(total.getAsInt());
+
+            stream = Arrays.stream(nums);
+            long totalVal = stream.reduce(1, (n1, n2) -> n1*n2);
+            System.out.println(totalVal);
     }
 }
