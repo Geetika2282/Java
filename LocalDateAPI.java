@@ -2,6 +2,8 @@ import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.temporal.ChronoUnit;
+import java.time.temporal.TemporalAdjuster;
+import java.time.temporal.TemporalAdjusters;
 import java.util.stream.Stream;
 
 public class LocalDateAPI {
@@ -35,6 +37,10 @@ public class LocalDateAPI {
         currentyear.filter((date-> date.getDayOfWeek().equals(DayOfWeek.FRIDAY)))
                 .filter((date)->date.getDayOfMonth()==13).forEach(System.out::println);
 
+        System.out.println(today.with(TemporalAdjusters.firstDayOfMonth()).getDayOfWeek());
+        System.out.println(today.with(TemporalAdjusters.firstDayOfNextMonth()).getDayOfWeek());
+        System.out.println(today.with(TemporalAdjusters.next(DayOfWeek.THURSDAY)));
+        System.out.println(today.with(TemporalAdjusters.firstInMonth(DayOfWeek.SUNDAY)));
 
     }
 }
