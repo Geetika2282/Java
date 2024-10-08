@@ -1,7 +1,25 @@
+enum MONTH{
+    JANUARY,
+    FEBRUARY,
+    MARCH,
+    APRIL,
+    MAY,
+    JUNE,
+    JULY,
+    AUGUST,
+    SEPTEMBER,
+    OCTOBER,
+    NOVEMBER,
+    DECEMBER
+}
 public class Date {
     private int date;
-    private String month;
+    MONTH month;
     private int year;
+
+    public void setMonth(MONTH month) {
+        this.month = month;
+    }
 
     public void setDate(int date) {
         if(date<0 || date>31){
@@ -12,15 +30,6 @@ public class Date {
 
     public int getDate() {
         return date;
-    }
-
-
-    public String getMonth() {
-        return month;
-    }
-
-    public void setMonth(String month) {
-        this.month = month;
     }
 
     public int getYear() {
@@ -36,7 +45,7 @@ public class Date {
         if(date>31){
             System.out.println("Increment month");
         }
-        System.out.println(date+" "+month+" "+year);
+        System.out.println(date+" "+this.month+" "+year);
         return date;
     }
 
@@ -47,7 +56,7 @@ public class Date {
     public static void main(String[] args) {
         Date dt = new Date();
         dt.setDate(22);
-        dt.setMonth("August");
+        dt.setMonth(MONTH.AUGUST);
         dt.setYear(2002);
         System.out.println(dt);
         dt.incrementDay(2);
