@@ -1,0 +1,23 @@
+import java.time.LocalDate;
+import java.time.Month;
+
+public class LocalDatee {
+    public static void main(String[] args) {
+        LocalDate today = LocalDate.now();
+        System.out.println(today);
+
+        LocalDate customDate = LocalDate.of(1990, 2, 4);
+
+        int dayOfMonth = today.getDayOfMonth();
+        Month month = today.getMonth();
+        int year = today.getYear();
+
+        System.out.println(dayOfMonth+" "+month+" "+year);
+        LocalDate yesterday = today.minusDays(1);
+        System.out.println(yesterday);
+        LocalDate programmersDay = LocalDate.of(2024, 01, 01).plusDays(256);
+        System.out.println(programmersDay);
+
+
+    }
+}
